@@ -9,6 +9,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 
+import hu.bme.dipterv.security.AuthoritiesConstants;
+
 public class TestAuthenticatedWebSession extends AuthenticatedWebSession
 {
 	private static final long serialVersionUID = 1L;
@@ -45,7 +47,7 @@ public class TestAuthenticatedWebSession extends AuthenticatedWebSession
         if (isSignedIn())
         {
             // If the user is signed in, they have these roles
-            return new Roles(Roles.ADMIN);
+            return new Roles(AuthoritiesConstants.ADMIN);
         }
         return null;
     }
