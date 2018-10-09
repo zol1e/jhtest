@@ -8,7 +8,6 @@ import hu.bme.dipterv.service.ArticleService;
 import hu.bme.dipterv.service.dto.ArticleDTO;
 import hu.bme.dipterv.service.mapper.ArticleMapper;
 import hu.bme.dipterv.web.rest.errors.ExceptionTranslator;
-import hu.bme.dipterv.web.rest.TestUtil;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,6 +28,8 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.List;
 
+
+import static hu.bme.dipterv.web.rest.TestUtil.createFormattingConversionService;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -84,7 +85,7 @@ public class ArticleResourceIntTest {
         this.restArticleMockMvc = MockMvcBuilders.standaloneSetup(articleResource)
             .setCustomArgumentResolvers(pageableArgumentResolver)
             .setControllerAdvice(exceptionTranslator)
-            .setConversionService(TestUtil.createFormattingConversionService())
+            .setConversionService(createFormattingConversionService())
             .setMessageConverters(jacksonMessageConverter).build();
     }
 
