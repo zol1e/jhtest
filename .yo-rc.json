@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "hu.bme.dipterv"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "monolith",
+    "baseName": "jhtest",
+    "packageName": "hu.bme.dipterv",
+    "packageFolder": "hu/bme/dipterv",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YzMwYjM1ZDBmMDAxODMxMWNhZTVjMTlkYzZmZjQ1MDllYzlmZGNiZWJjMzBiMDZjZjBiMmFhOWFiOTgzYjI2NGI4MmY4OWI0OTMwNGFjOWI3YWMzM2IzYjljNzdkYjUwNThiMjExY2UwYzM5NDQ1NjgxNDQyMjA2N2ZlYjIzZWI=",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
