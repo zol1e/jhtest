@@ -1,9 +1,5 @@
 package hu.bme.dipterv.client.wicket;
 
-import java.util.EnumSet;
-
-import javax.servlet.SessionTrackingMode;
-
 import org.apache.wicket.Page;
 import org.apache.wicket.authroles.authentication.AbstractAuthenticatedWebSession;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
