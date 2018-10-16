@@ -23,7 +23,7 @@ public class WicketApplication extends AuthenticatedWebApplication
     @Override
     protected Class<? extends AbstractAuthenticatedWebSession> getWebSessionClass()
     {
-        return TestAuthenticatedWebSession.class;
+        return WicketAuthenticatedWebSession.class;
     }
 
     @Override
