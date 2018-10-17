@@ -20,6 +20,8 @@ public class WicketAuthenticatedWebSession extends AuthenticatedWebSession
 	@SpringBean
     private AuthenticationManager authenticationManager;
 	
+	private Authentication authentication;
+	
     /**
      * Construct.
      * 
@@ -37,16 +39,17 @@ public class WicketAuthenticatedWebSession extends AuthenticatedWebSession
     {
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(username, password);
-        Authentication authenticate = authenticationManager.authenticate(authenticationToken);
+        
+        authentication = authenticationManager.authenticate(authenticationToken);
         
         // Check username and password
-        return authenticate.isAuthenticated();
+        return authentication.isAuthenticated();
     }
 
 	@Override
 	public Roles getRoles() {
 		if(isSignedIn()) {
-			return new Roles("EZ LESZ A ROLE");
+			return new Roles(authentication.getAuthorities().iterator().next().getAuthority());
 		}
 		return null;
 	}
