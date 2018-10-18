@@ -1,24 +1,25 @@
-package hu.bme.dipterv.client.wicket;
+package hu.bme.dipterv.client.wicket.components;
 
 import org.apache.wicket.Session;
 import org.apache.wicket.authroles.authentication.panel.SignInPanel;
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
-public class HomePage extends WebPage {
+import hu.bme.dipterv.client.wicket.WicketAuthenticatedWebSession;
 
-	private static final long serialVersionUID = 1L;
+public class UserPanel extends Panel {
 
-	private SignInPanel signInPanel;
-	
 	private Model<String> welcomeModel;
 	
-	public HomePage () {
+	private SignInPanel signInPanel;
+	
+	public UserPanel(String id) {
+		super(id);
 		
-		welcomeModel = Model.of("Welcome label");
-		Label label = new Label("lblWelcome", welcomeModel);
+		welcomeModel = Model.of("");
+		Label label = new Label("lblLoginStatus", welcomeModel);
 		add(label);
 		
 		// Action link counts link clicks on works with onclick handler
@@ -33,7 +34,7 @@ public class HomePage extends WebPage {
         };
         add(actionOnClickLink);
         
-		signInPanel = new SignInPanel("signInPanel");
+        signInPanel = new SignInPanel("signInPanel");
 		add(signInPanel);
 		
 		WicketAuthenticatedWebSession session = (WicketAuthenticatedWebSession) Session.get();
@@ -47,7 +48,6 @@ public class HomePage extends WebPage {
 			actionOnClickLink.setVisible(false);
 			welcomeModel.setObject("Not signed in");
 		}
-		
 	}
-	
+
 }
