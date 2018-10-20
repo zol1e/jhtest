@@ -3,6 +3,9 @@ package hu.bme.dipterv.client.wicket.components;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
+import hu.bme.dipterv.client.wicket.pages.ArticlePage;
+import hu.bme.dipterv.client.wicket.pages.HomePage;
+
 public class MenuPanel extends Panel {
 
 	public MenuPanel(String id) {
@@ -14,7 +17,7 @@ public class MenuPanel extends Panel {
 
 			@Override
             public void onClick() {
-
+				setResponsePage(HomePage.class);
             }
         };
         add(homePageLink);
@@ -25,7 +28,7 @@ public class MenuPanel extends Panel {
 
 			@Override
             public void onClick() {
-
+				setResponsePage(ArticlePage.class);
             }
         };
         add(articlePageLink);

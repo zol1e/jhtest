@@ -6,7 +6,7 @@ import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
-import hu.bme.dipterv.client.wicket.pages.MainPage;
+import hu.bme.dipterv.client.wicket.pages.HomePage;
 
 /**
  * Application object for your web application.
@@ -19,7 +19,7 @@ public class WicketApplication extends AuthenticatedWebApplication
 	@Override
     public Class<? extends Page> getHomePage()
     {
-        return MainPage.class;
+        return HomePage.class;
     }
 
     @Override

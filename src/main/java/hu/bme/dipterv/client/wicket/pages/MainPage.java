@@ -11,24 +11,18 @@ import hu.bme.dipterv.client.wicket.components.UserPanel;
 public class MainPage extends WebPage {
 
 	private static final long serialVersionUID = 1L;
-
-	private Model<String> welcomeModel;
 	
 	private Component userPanel;
 	
 	private Component menuPanel;
 	
 	public MainPage () {
-		
+
 		userPanel = new UserPanel("userPanel");
 		add(userPanel);
 		
 		menuPanel = new MenuPanel("menuPanel");
 		add(menuPanel);
-		
-		welcomeModel = Model.of("Welcome on home page");
-		Label label = new Label("lblWelcome", welcomeModel);
-		add(label);
 		
 	}
 }
