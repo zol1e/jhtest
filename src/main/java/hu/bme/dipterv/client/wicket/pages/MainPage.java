@@ -3,26 +3,23 @@ package hu.bme.dipterv.client.wicket.pages;
 import org.apache.wicket.Component;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.model.Model;
 
-import hu.bme.dipterv.client.wicket.components.MenuPanel;
-import hu.bme.dipterv.client.wicket.components.UserPanel;
+import hu.bme.dipterv.client.wicket.components.menu.MenuPanel;
+import hu.bme.dipterv.client.wicket.components.user.UserPanel;
 
 public class MainPage extends WebPage {
-
-	private static final long serialVersionUID = 1L;
-	
-	private Component userPanel;
-	
-	private Component menuPanel;
+	public static final String CONTENT_ID = "contentComponent";
 	
 	public MainPage () {
 
-		userPanel = new UserPanel("userPanel");
+		Component userPanel = new UserPanel("userPanel");
 		add(userPanel);
 		
-		menuPanel = new MenuPanel("menuPanel");
+		Component menuPanel = new MenuPanel("menuPanel");
 		add(menuPanel);
 		
+		// Extend helyett lehet "placeholdereket" létrehozni.
+		// A leszármazott oldalak ezeket fogják lecserélni a replace(new component) metódussal
+		add(new Label(CONTENT_ID, "Content area"));
 	}
 }

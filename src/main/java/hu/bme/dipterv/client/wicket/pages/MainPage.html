@@ -5,6 +5,18 @@
 <body>
 	<div wicket:id="userPanel"></div>
 	<div wicket:id="menuPanel"></div>
+    
+    <!-- Ezt írják felül a leszármazott oldalak. Akár több ilyen is lehet! -->
+    <div wicket:id="contentComponent"></div>
+        
+    <!-- 
+    	
+    	Ezt egyszerû oldalaknál érdemes haszálni: csak egy helyet tudnak felülírni a leszármazott oldalak!
+    	Ez nem lesz jó komplexebb esetben.
+    	<wicket:child/>  
+    
+    -->
+    
     <wicket:child/>
 </body>
 </html>
