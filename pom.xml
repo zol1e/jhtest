@@ -21,7 +21,7 @@
         <scala.version>2.12.6</scala.version>
         <node.version>v8.11.4</node.version>
         <npm.version>6.4.1</npm.version>
-        <wicket.version>8.2.0-SNAPSHOT</wicket.version>
+        <wicket.version>8.1.0</wicket.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.testresult.directory>${project.build.directory}/test-results</project.testresult.directory>
