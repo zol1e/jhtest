@@ -756,17 +756,17 @@
                                     <npmVersion>${npm.version}</npmVersion>
                                 </configuration>
                             </execution>
-                            <execution>
-                                <id>webpack build dev</id>
-                                <goals>
-                                    <goal>npm</goal>
-                                </goals>
-                                <phase>generate-resources</phase>
-                                <configuration>
-                                    <arguments>run webpack:build</arguments>
-                                    <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven>
-                                </configuration>
-                            </execution>
+<!--                             <execution> -->
+<!--                                 <id>webpack build dev</id> -->
+<!--                                 <goals> -->
+<!--                                     <goal>npm</goal> -->
+<!--                                 </goals> -->
+<!--                                 <phase>generate-resources</phase> -->
+<!--                                 <configuration> -->
+<!--                                     <arguments>run webpack:build</arguments> -->
+<!--                                     <npmInheritsProxyConfigFromMaven>false</npmInheritsProxyConfigFromMaven> -->
+<!--                                 </configuration> -->
+<!--                             </execution> -->
                         </executions>
                     </plugin>
                     <plugin>
