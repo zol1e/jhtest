@@ -759,7 +759,7 @@
                             <execution>
                                 <id>webpack build dev</id>
                                 <goals>
-                                    <goal>npm</goal>
+                                    <goal>yarn</goal>
                                 </goals>
                                 <phase>generate-resources</phase>
                                 <configuration>
