@@ -104,7 +104,7 @@ public class JhtestApp {
             env.getActiveProfiles());
     }
     
-	/*@Bean
+	@Bean
 	public FilterRegistrationBean wicketFilter() {
 		FilterRegistrationBean reg = new FilterRegistrationBean();
 		reg.setFilter(new WicketFilter());
@@ -113,5 +113,5 @@ public class JhtestApp {
 		reg.addInitParameter("applicationClassName", WicketApplication.class.getName());
 		
 		return reg;
-	}*/
+	}
 }
