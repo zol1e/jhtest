@@ -19,7 +19,9 @@ import { JhtestAccountModule } from './account/account.module';
 import { JhtestEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
-import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+import { FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+import { JhiMainComponent, NavbarComponent } from './layouts2';
+import { JhiLoginComponent } from './shared2';
 
 @NgModule({
     imports: [
@@ -33,7 +35,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         JhtestEntityModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
+    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, JhiLoginComponent],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,
