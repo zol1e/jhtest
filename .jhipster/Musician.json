@@ -1,0 +1,38 @@
+{
+    "name": "Musician",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthday",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "tracks",
+            "otherEntityName": "track",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "performers"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "bands",
+            "otherEntityName": "band",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "members"
+        }
+    ],
+    "changelogDate": "20181106160115",
+    "entityTableName": "musician",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

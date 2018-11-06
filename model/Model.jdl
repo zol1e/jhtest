@@ -6,6 +6,33 @@ entity Article {
 
 relationship ManyToOne {
    Article{writer} to User
+   Album{band} to Band{albums}
+   Track{band} to Band{tracks}
+}
+
+relationship ManyToMany {
+   Track{performers} to Musician{tracks}
+   Band{members} to Musician{bands}
+}
+
+entity Album {
+	name String
+	year LocalDate
+}
+
+entity Band {
+	name String
+	founded LocalDate
+}
+
+entity Musician {
+	name String
+	birthday LocalDate
+}
+
+entity Track {
+	title String
+	year LocalDate
 }
 
 dto * with mapstruct

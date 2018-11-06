@@ -1,0 +1,44 @@
+{
+    "name": "Band",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "founded",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "bands",
+            "relationshipName": "members",
+            "otherEntityName": "musician",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "albums",
+            "otherEntityName": "album",
+            "otherEntityRelationshipName": "band"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "tracks",
+            "otherEntityName": "track",
+            "otherEntityRelationshipName": "band"
+        }
+    ],
+    "changelogDate": "20181106160114",
+    "entityTableName": "band",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
