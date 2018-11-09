@@ -4,6 +4,8 @@ import hu.bme.dipterv.domain.*;
 import hu.bme.dipterv.service.dto.BandDTO;
 
 import org.mapstruct.*;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * Mapper for the entity Band and its DTO BandDTO.

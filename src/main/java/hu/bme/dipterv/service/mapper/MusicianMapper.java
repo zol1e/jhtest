@@ -4,6 +4,8 @@ import hu.bme.dipterv.domain.*;
 import hu.bme.dipterv.service.dto.MusicianDTO;
 
 import org.mapstruct.*;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * Mapper for the entity Musician and its DTO MusicianDTO.

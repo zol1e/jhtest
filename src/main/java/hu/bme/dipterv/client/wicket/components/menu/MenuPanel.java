@@ -1,11 +1,16 @@
 package hu.bme.dipterv.client.wicket.components.menu;
 
+import org.apache.wicket.MarkupContainer;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.link.StatelessLink;
 import org.apache.wicket.markup.html.panel.Panel;
 
+import hu.bme.dipterv.client.wicket.components.musicapp.MusicAppMain;
+import hu.bme.dipterv.client.wicket.components.user.UserPanel;
+import hu.bme.dipterv.client.wicket.pages.MainPage;
 import hu.bme.dipterv.client.wicket.pages.article.ArticlePage;
 import hu.bme.dipterv.client.wicket.pages.home.HomePage;
+import hu.bme.dipterv.client.wicket.pages.musicapp.MusicAppPage;
 
 public class MenuPanel extends Panel {
 
@@ -33,6 +38,20 @@ public class MenuPanel extends Panel {
             }
         };
         add(articlePageLink);
+        
+        StatelessLink<Void> musicappLink = new StatelessLink<Void>("musicAppPanel")
+        {
+			private static final long serialVersionUID = 1L;
+
+			@Override
+            public void onClick() {
+				//getParent().getParent().replace(new MusicAppMain(MainPage.CONTENT_ID));
+				//setResponsePage(MusicAppPage.class);
+				MarkupContainer parent = getParent().getParent();
+				parent.addOrReplace(new MusicAppMain(MainPage.CONTENT_ID));
+            }
+        };
+        add(musicappLink);
 	}
 
 }
