@@ -22,6 +22,8 @@ import * as moment from 'moment';
 import { FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
 import { JhiMainComponent, NavbarComponent } from './layouts2';
 import { JhiLoginComponent } from './shared2';
+import { MusicAppComponent } from 'app/musicapp/musicapp.component';
+import { BandlistComponent } from 'app/musicapp/band/bandlist.component';
 
 @NgModule({
     imports: [
@@ -35,7 +37,16 @@ import { JhiLoginComponent } from './shared2';
         JhtestEntityModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
-    declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, JhiLoginComponent],
+    declarations: [
+        JhiMainComponent,
+        NavbarComponent,
+        ErrorComponent,
+        PageRibbonComponent,
+        FooterComponent,
+        JhiLoginComponent,
+        MusicAppComponent,
+        BandlistComponent
+    ],
     providers: [
         {
             provide: HTTP_INTERCEPTORS,
