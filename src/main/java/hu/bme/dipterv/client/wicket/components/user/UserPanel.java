@@ -18,6 +18,10 @@ public class UserPanel extends Panel {
 	public UserPanel(String id) {
 		super(id);
 		
+		Model<String> hhh = Model.of("hahah");
+		Label label2 = new Label("labeltest", hhh);
+		add(label2);
+		
 		Model<String> welcomeModel = Model.of("");
 		Label label = new Label("lblLoginStatus", welcomeModel);
 		add(label);

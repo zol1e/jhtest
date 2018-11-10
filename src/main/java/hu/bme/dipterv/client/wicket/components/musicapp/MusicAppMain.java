@@ -1,9 +1,7 @@
 package hu.bme.dipterv.client.wicket.components.musicapp;
 
 import org.apache.wicket.Component;
-import org.apache.wicket.MarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.StatelessLink;
 import org.apache.wicket.markup.html.panel.Panel;
 
 import hu.bme.dipterv.client.wicket.components.musicapp.album.AlbumList;
@@ -25,9 +23,9 @@ public class MusicAppMain extends Panel {
 		
 		// Extend helyett lehet "placeholdereket" létrehozni.
 		// A leszármazott oldalak ezeket fogják lecserélni a replace(new component) metódussal
-		//add(new Label(CONTENT, "Content area"));
+		add(new Label(CONTENT, "Content area"));
 		
-		Component bandViewer = new BandViewer(MusicAppMain.CONTENT);
-		add(bandViewer);
+		/*BandViewer bandViewer = new BandViewer(MusicAppMain.CONTENT);
+		add(bandViewer);*/
 	}
 }

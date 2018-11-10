@@ -6,6 +6,7 @@ import org.apache.wicket.markup.html.link.StatelessLink;
 import org.apache.wicket.markup.html.panel.Panel;
 
 import hu.bme.dipterv.client.wicket.components.musicapp.MusicAppMain;
+import hu.bme.dipterv.client.wicket.components.musicapp.band.viewer.BandViewer;
 import hu.bme.dipterv.client.wicket.components.user.UserPanel;
 import hu.bme.dipterv.client.wicket.pages.MainPage;
 import hu.bme.dipterv.client.wicket.pages.article.ArticlePage;
@@ -46,9 +47,10 @@ public class MenuPanel extends Panel {
 			@Override
             public void onClick() {
 				//getParent().getParent().replace(new MusicAppMain(MainPage.CONTENT_ID));
-				//setResponsePage(MusicAppPage.class);
-				MarkupContainer parent = getParent().getParent();
-				parent.addOrReplace(new MusicAppMain(MainPage.CONTENT_ID));
+				//setResponsePage(BandViewer.class);
+				/*MarkupContainer parent = getParent().getParent();
+				parent.addOrReplace(new MusicAppMain(MainPage.CONTENT_ID));*/
+				setResponsePage(MusicAppPage.class);
             }
         };
         add(musicappLink);

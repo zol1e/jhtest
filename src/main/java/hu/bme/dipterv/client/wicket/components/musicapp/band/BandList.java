@@ -7,6 +7,7 @@ import org.apache.wicket.markup.html.panel.Panel;
 import hu.bme.dipterv.client.wicket.components.musicapp.MusicAppMain;
 import hu.bme.dipterv.client.wicket.components.musicapp.band.viewer.BandViewer;
 import hu.bme.dipterv.client.wicket.pages.MainPage;
+import hu.bme.dipterv.client.wicket.pages.musicapp.MusicAppPage;
 
 public class BandList extends Panel {
 
@@ -19,10 +20,9 @@ public class BandList extends Panel {
 
 			@Override
             public void onClick() {
-				/*MarkupContainer parent = getParent();
+				MarkupContainer parent = getParent();
 				MarkupContainer parent2 = parent.getParent();
-				MarkupContainer replace = parent2.replace(new BandViewer(MusicAppMain.CONTENT));
-				System.out.println();*/
+				parent2.addOrReplace(new BandViewer(MusicAppMain.CONTENT));
             }
         };
         add(bandNavigateActionLink);

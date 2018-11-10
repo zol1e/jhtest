@@ -11,7 +11,7 @@ public class MainPage extends WebPage {
 	public static final String CONTENT_ID = "contentComponent";
 	
 	public MainPage () {
-
+		
 		Component userPanel = new UserPanel("userPanel");
 		add(userPanel);
 		

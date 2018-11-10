@@ -6,9 +6,11 @@ import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
+import hu.bme.dipterv.client.wicket.components.musicapp.band.viewer.BandViewer;
 import hu.bme.dipterv.client.wicket.pages.MainPage;
 import hu.bme.dipterv.client.wicket.pages.article.ArticlePage;
 import hu.bme.dipterv.client.wicket.pages.home.HomePage;
+import hu.bme.dipterv.client.wicket.pages.musicapp.MusicAppPage;
 
 /**
  * Application object for your web application.
@@ -46,5 +48,6 @@ public class WicketApplication extends AuthenticatedWebApplication
 		// Mountolás, hogy szép url-en lehessen elérni az oldalakat
 		mountPage("/home", HomePage.class);
 		mountPage("/articles", ArticlePage.class);
+		mountPage("/musicapp", MusicAppPage.class);
     }
 }
