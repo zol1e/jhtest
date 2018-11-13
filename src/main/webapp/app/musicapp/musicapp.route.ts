@@ -5,5 +5,5 @@ import { BandlistComponent } from 'app/musicapp/band/bandlist.component';
 export const musicappRoute: Route = {
     path: 'musicapp',
     component: MusicAppComponent,
-    children: [{ path: 'bandlist', component: BandlistComponent }]
+    children: [{ path: 'bandlist', component: BandlistComponent, outlet: 'contentHolder' }]
 };
