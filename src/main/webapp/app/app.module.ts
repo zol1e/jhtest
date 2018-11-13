@@ -24,6 +24,7 @@ import { JhiMainComponent, NavbarComponent } from './layouts2';
 import { JhiLoginComponent } from './shared2';
 import { MusicAppComponent } from 'app/musicapp/musicapp.component';
 import { BandlistComponent } from 'app/musicapp/band/bandlist.component';
+import { BandinfoComponent } from 'app/musicapp/band/bandinfo.component';
 
 @NgModule({
     imports: [
@@ -45,7 +46,8 @@ import { BandlistComponent } from 'app/musicapp/band/bandlist.component';
         FooterComponent,
         JhiLoginComponent,
         MusicAppComponent,
-        BandlistComponent
+        BandlistComponent,
+        BandinfoComponent
     ],
     providers: [
         {

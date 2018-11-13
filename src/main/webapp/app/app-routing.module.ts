@@ -6,7 +6,7 @@ import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 import { musicappRoute } from 'app/musicapp/musicapp.route';
 import { bandlistRoute } from 'app/musicapp/band/bandlist.route';
 
-const LAYOUT_ROUTES = [navbarRoute, musicappRoute, bandlistRoute, ...errorRoute];
+const LAYOUT_ROUTES = [navbarRoute, musicappRoute, ...errorRoute];
 
 @NgModule({
     imports: [
