@@ -23,7 +23,7 @@ public class MusicAppMain extends Panel {
 		
 		// Extend helyett lehet "placeholdereket" létrehozni.
 		// A leszármazott oldalak ezeket fogják lecserélni a replace(new component) metódussal
-		add(new Label(CONTENT, "Content area"));
+		add(new Label(CONTENT, ""));
 		
 		/*BandViewer bandViewer = new BandViewer(MusicAppMain.CONTENT);
 		add(bandViewer);*/

@@ -1,7 +1,11 @@
-<div>Music app component</div>
+<div style="background-color:coral; padding: 35px;">Music app component
 <!-- <a routerLink="bandlist" routerLinkActive="active">Bandlist</a> -->
+<!-- <a [routerLink]="[{ outlets: { 'bandListHolder': ['bandlist'], 'contentHolder': ['bandinfo'] } }]">Init</a> -->
 
-<a [routerLink]="[{ outlets: { 'bandListHolder': ['bandlist'], 'contentHolder': ['bandinfo'] } }]">Init</a>
 <router-outlet name="bandListHolder"></router-outlet>
-<router-outlet name="AlbumListHolder"></router-outlet>
-<router-outlet name="contentHolder"></router-outlet>
+<router-outlet name="albumListHolder"></router-outlet>
+
+<div style="background-color:blue; padding: 35px;">
+	<router-outlet name="contentHolder">Content area</router-outlet>
+</div>
+</div>

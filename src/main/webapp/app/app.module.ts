@@ -25,6 +25,9 @@ import { JhiLoginComponent } from './shared2';
 import { MusicAppComponent } from 'app/musicapp/musicapp.component';
 import { BandlistComponent } from 'app/musicapp/band/bandlist.component';
 import { BandinfoComponent } from 'app/musicapp/band/bandinfo.component';
+import { AlbumlistComponent } from 'app/musicapp/album/albumlist.component';
+import { BandviewerComponent } from 'app/musicapp/band/viewer/bandviewer.component';
+import { MusicianlistComponent } from 'app/musicapp/musician/musicianlist.component';
 
 @NgModule({
     imports: [
@@ -47,7 +50,10 @@ import { BandinfoComponent } from 'app/musicapp/band/bandinfo.component';
         JhiLoginComponent,
         MusicAppComponent,
         BandlistComponent,
-        BandinfoComponent
+        BandinfoComponent,
+        AlbumlistComponent,
+        BandviewerComponent,
+        MusicianlistComponent
     ],
     providers: [
         {
