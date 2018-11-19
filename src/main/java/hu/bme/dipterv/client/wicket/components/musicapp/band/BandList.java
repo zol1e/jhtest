@@ -1,15 +1,12 @@
 package hu.bme.dipterv.client.wicket.components.musicapp.band;
 
-import org.apache.wicket.MarkupContainer;
 import org.apache.wicket.markup.html.link.StatelessLink;
-import org.apache.wicket.markup.html.panel.Panel;
 
-import hu.bme.dipterv.client.wicket.components.musicapp.MusicAppMain;
 import hu.bme.dipterv.client.wicket.components.musicapp.band.viewer.BandViewer;
-import hu.bme.dipterv.client.wicket.pages.MainPage;
-import hu.bme.dipterv.client.wicket.pages.musicapp.MusicAppPage;
+import hu.bme.dipterv.client.wicket.extension.NavigablePanel;
+import hu.bme.dipterv.client.wicket.extension.NavigateAction;
 
-public class BandList extends Panel {
+public class BandList extends NavigablePanel {
 
 	public BandList(String id) {
 		super(id);
@@ -20,9 +17,15 @@ public class BandList extends Panel {
 
 			@Override
             public void onClick() {
-				MarkupContainer parent = getParent();
-				MarkupContainer parent2 = parent.getParent();
-				parent2.addOrReplace(new BandViewer(MusicAppMain.CONTENT));
+				NavigablePanel parent = (NavigablePanel) getParent();
+				
+				try {
+					parent.navigate(new NavigateAction(BandViewer.class, new Long(1234)));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//parent2.addOrReplace(new BandViewer(MusicAppMain.CONTENT));
             }
         };
         add(bandNavigateActionLink);

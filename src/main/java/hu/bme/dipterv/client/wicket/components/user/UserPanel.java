@@ -3,24 +3,16 @@ package hu.bme.dipterv.client.wicket.components.user;
 import org.apache.wicket.Session;
 import org.apache.wicket.authroles.authentication.panel.SignInPanel;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.link.StatelessLink;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
-import org.apache.wicket.request.cycle.PageRequestHandlerTracker;
-import org.apache.wicket.request.cycle.RequestCycle;
 
 import hu.bme.dipterv.client.wicket.WicketAuthenticatedWebSession;
-import hu.bme.dipterv.client.wicket.pages.home.HomePage;
 
 public class UserPanel extends Panel {
 
 	public UserPanel(String id) {
 		super(id);
-		
-		Model<String> hhh = Model.of("hahah");
-		Label label2 = new Label("labeltest", hhh);
-		add(label2);
 		
 		Model<String> welcomeModel = Model.of("");
 		Label label = new Label("lblLoginStatus", welcomeModel);

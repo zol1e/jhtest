@@ -9,9 +9,10 @@ import hu.bme.dipterv.client.wicket.components.musicapp.MusicAppMain;
 import hu.bme.dipterv.client.wicket.components.musicapp.band.BandInfo;
 import hu.bme.dipterv.client.wicket.components.musicapp.musician.MusicianList;
 import hu.bme.dipterv.client.wicket.components.user.UserPanel;
+import hu.bme.dipterv.client.wicket.extension.NavigablePanel;
 import hu.bme.dipterv.client.wicket.pages.musicapp.MusicAppPage;
 
-public class BandViewer extends Panel {
+public class BandViewer extends NavigablePanel {
 
 	public BandViewer(String id) {
 		super(id);

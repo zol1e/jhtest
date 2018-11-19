@@ -1,5 +1,11 @@
 package hu.bme.dipterv.client.wicket.components.musicapp.track;
 
-public class TrackInfo {
+import hu.bme.dipterv.client.wicket.extension.NavigablePanel;
+
+public class TrackInfo extends NavigablePanel {
+
+	public TrackInfo(String id) {
+		super(id);
+	}
 
 }

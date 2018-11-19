@@ -7,13 +7,17 @@ import org.apache.wicket.markup.html.panel.Panel;
 import hu.bme.dipterv.client.wicket.components.musicapp.album.AlbumList;
 import hu.bme.dipterv.client.wicket.components.musicapp.band.BandList;
 import hu.bme.dipterv.client.wicket.components.musicapp.band.viewer.BandViewer;
+import hu.bme.dipterv.client.wicket.extension.NavigablePanel;
 
-public class MusicAppMain extends Panel {
+public class MusicAppMain extends NavigablePanel {
 	
 	public static final String CONTENT = "contentPanelHolder";
 	
 	public MusicAppMain(String id) {
 		super(id);
+		
+		this.navigateActionIdMap.put(new Long(1234), CONTENT);
+		this.navigateActionIdMap.put(new Long(5678), CONTENT);
 		
 		Component bandListPanel = new BandList("bandListPanel");
 		add(bandListPanel);
