@@ -18,6 +18,7 @@ public class MusicAppMain extends NavigablePanel {
 		
 		this.navigateActionIdMap.put(new Long(1234), CONTENT);
 		this.navigateActionIdMap.put(new Long(5678), CONTENT);
+		this.navigateActionIdMap.put(new Long(9101), CONTENT);
 		
 		Component bandListPanel = new BandList("bandListPanel");
 		add(bandListPanel);
