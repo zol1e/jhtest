@@ -5,6 +5,7 @@ import { AlbumlistComponent } from 'app/musicapp/album/albumlist.component';
 import { BandviewerComponent } from 'app/musicapp/band/viewer/bandviewer.component';
 import { BandinfoComponent } from 'app/musicapp/band/bandinfo.component';
 import { MusicianlistComponent } from 'app/musicapp/musician/musicianlist.component';
+import { TracklistComponent } from 'app/musicapp/track/tracklist.component';
 
 export const musicappRoute: Route = {
     path: 'musicapp',
@@ -20,6 +21,7 @@ export const musicappRoute: Route = {
                 { path: 'bandinfo', component: BandinfoComponent, outlet: 'bandInfoHolder' },
                 { path: 'musicianlist', component: MusicianlistComponent, outlet: 'musiciansHolder' }
             ]
-        }
+        },
+        { path: 'tracklist', component: TracklistComponent, outlet: 'contentHolder' }
     ]
 };

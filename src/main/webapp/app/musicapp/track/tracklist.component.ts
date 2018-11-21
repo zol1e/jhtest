@@ -21,6 +21,6 @@ export class TracklistComponent implements OnInit {
     }
 
     onBackToBandViewerClicked() {
-        this.navigationService.requestNavigation('select band clicked');
+        this.navigationService.requestNavigation('3');
     }
 }

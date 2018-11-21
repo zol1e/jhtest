@@ -13,7 +13,11 @@ export class MusicAppComponent implements OnInit {
 
     constructor(private router: Router, private route: ActivatedRoute, private navigationService: NavigationService) {
         this.subscription = navigationService.navRequested$.subscribe(navrequest => {
-            this.router.navigate([{ outlets: { contentHolder: ['bandviewer'] } }], { relativeTo: this.route });
+            if (navrequest == '1') this.router.navigate([{ outlets: { contentHolder: ['bandviewer'] } }], { relativeTo: this.route });
+
+            if (navrequest == '2') this.router.navigate([{ outlets: { contentHolder: ['tracklist'] } }], { relativeTo: this.route });
+
+            if (navrequest == '3') this.router.navigate([{ outlets: { contentHolder: ['bandviewer'] } }], { relativeTo: this.route });
         });
     }
 

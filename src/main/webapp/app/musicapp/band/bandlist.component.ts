@@ -21,6 +21,6 @@ export class BandlistComponent implements OnInit {
     }
 
     onSelectBandClicked() {
-        this.navigationService.requestNavigation('select band clicked');
+        this.navigationService.requestNavigation('1');
     }
 }

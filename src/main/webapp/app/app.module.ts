@@ -28,6 +28,7 @@ import { BandinfoComponent } from 'app/musicapp/band/bandinfo.component';
 import { AlbumlistComponent } from 'app/musicapp/album/albumlist.component';
 import { BandviewerComponent } from 'app/musicapp/band/viewer/bandviewer.component';
 import { MusicianlistComponent } from 'app/musicapp/musician/musicianlist.component';
+import { TracklistComponent } from 'app/musicapp/track/tracklist.component';
 
 @NgModule({
     imports: [
@@ -53,7 +54,8 @@ import { MusicianlistComponent } from 'app/musicapp/musician/musicianlist.compon
         BandinfoComponent,
         AlbumlistComponent,
         BandviewerComponent,
-        MusicianlistComponent
+        MusicianlistComponent,
+        TracklistComponent
     ],
     providers: [
         {
